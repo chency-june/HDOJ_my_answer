@@ -3,7 +3,8 @@
 using namespace std;
 
 int main(void) {
-    int arr[40] = {3, 8 };
+    // int 越界
+    long long int arr[40] = {3, 8 };
     for (int i = 2; i < 40; i++) {
         arr[i] = 2 * ( arr[i - 1] + arr[i - 2] );
     }
