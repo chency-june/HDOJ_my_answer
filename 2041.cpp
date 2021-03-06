@@ -9,11 +9,12 @@ int main(void) {
         int m;
         cin >> m;
         m--;
-        int times = 0;
-        for (int i = 0; 2 * i < m; i++) {
-            int tmp = 1;
-            for (int j = 0; j <= i; j++) {
-                tmp = tmp * ( m - i - j ) / ( j + 1 );
+        long long int times = 0;
+        for (int i = 0; 2 * i <= m; i++) {
+            // C (m-i) i
+            long long int tmp = 1;
+            for (int j = 1; j <= i; j++) {
+                tmp = tmp * ( m - i - j + 1 ) / j;
             }
             times += tmp;
         }
